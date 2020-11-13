@@ -3,7 +3,7 @@
 <title>ITF Lab</title>
 </head>
 <body>
-    <form action = "form.html" method = "post" id="ITFLab" >
+    
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'ananyot.mysql.database.azure.com', 'kilzen@ananyot', 'sM7wgvcaip', 'ITFLab', 3306);
@@ -35,7 +35,7 @@ while($Result = mysqli_fetch_array($res))
 <?php
 mysqli_close($conn);
 ?>
-    <a href="http://www.google.com"><input type="button" value="submit"></a>
-    </form>
+    <a href="http://database04.azurewebsites.net/form.php"><input type="button" value="submit"></a>
+    
 </body>
 </html>
