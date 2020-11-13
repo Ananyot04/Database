@@ -35,7 +35,7 @@ while($Result = mysqli_fetch_array($res))
 <?php
 mysqli_close($conn);
 ?>
-    <input type="เพิ่ม" id="commentBtn">
+    <input type="submit" id="commentBtn">
     </form>
 </body>
 </html>
