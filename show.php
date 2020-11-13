@@ -26,7 +26,7 @@ while($Result = mysqli_fetch_array($res))
   <tr>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
-    
+    <td><?php echo $Result[<input type="submit" value="เพิ่ม">];?></td>
   </tr>
 <?php
 }
