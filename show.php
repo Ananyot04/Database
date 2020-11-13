@@ -3,6 +3,7 @@
 <title>ITF Lab</title>
 </head>
 <body>
+    <form action = "form.html" method = "post" id="ITFLab" >
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'ananyot.mysql.database.azure.com', 'kilzen@ananyot', 'sM7wgvcaip', 'ITFLab', 3306);
@@ -34,5 +35,7 @@ while($Result = mysqli_fetch_array($res))
 <?php
 mysqli_close($conn);
 ?>
+    <input type="เพิ่ม" id="commentBtn">
+    </form>
 </body>
 </html>
