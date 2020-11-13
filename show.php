@@ -36,7 +36,7 @@ while($Result = mysqli_fetch_array($res))
 mysqli_close($conn);
 ?>
     <form action = "form.html" method = "post" id="ITFLab" >
-        <input type="button" value="เพิ่ม">
+        <input type="submit" value="เพิ่ม">
 </form>
     
 </body>
