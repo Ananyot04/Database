@@ -35,7 +35,7 @@ while($Result = mysqli_fetch_array($res))
 <?php
 mysqli_close($conn);
 ?>
-    <a href="http://database04.azurewebsites.net/form.php"><input type="button" value="submit"></a>
+    <a href="http://database04.azurewebsites.net/form.php"><input type="button" value="เพิ่ม"></a>
     
 </body>
 </html>
