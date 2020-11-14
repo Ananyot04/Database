@@ -19,18 +19,13 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     <th width="350"> <div align="center">Comment </div></th>
     <th width="150"> <div align="center">Action </div></th>
   </tr>
-    <?php
-    function familyName($fname) {
-  echo "$fname Refsnes.<br>";
-    }
-    ?>
 <?php
 while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><?php echo $Result['Name'];?></div></td>
-    <td><?php echo $Result['Comment'];?></td>
+    <td><?php echo <div align="center">$Result['Name'];?></div></td>
+    <td><?php echo <div align="center">$Result['Comment'];?></div></td>
     <td><button oncilk="familyName($Result['ID'])">ลบ</button><button oncilk="">แก้ไข</button></td>
   </tr>
 <?php
