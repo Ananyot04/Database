@@ -27,7 +27,7 @@ while($Result = mysqli_fetch_array($res))
     <td><div align="center"><?php echo $Result['Name'];?></div></td>
     <td><div align="center"><?php echo $Result['Comment'];?></div></td>
       <td>
-          <form action = "delete.php" method = "post" id="ITFLab" ><div align="center"><button oncilk="">ลบ</button></form>
+          <div align="center"><a href="delete.php?del_id=<?=$row_show[id]?>">ลบ</a></div>
               <form action = "form.html" method = "post" id="ITFLab" ><button oncilk="">แก้ไข</button></form></div></td>
   </tr>
 <?php
