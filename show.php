@@ -24,8 +24,8 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><?php echo <div align="center">$Result['Name'];?></div></td>
-    <td><?php echo <div align="center">$Result['Comment'];?></div></td>
+    <td><div align="center"><?php echo $Result['Name'];?></div></td>
+    <td><div align="center"><?php echo $Result['Comment'];?></div></td>
     <td><button oncilk="familyName($Result['ID'])">ลบ</button><button oncilk="">แก้ไข</button></td>
   </tr>
 <?php
