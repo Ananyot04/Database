@@ -7,7 +7,7 @@ if (mysqli_connect_errno($conn))
 }
 $name = $_POST["name"];
 
-$sql = "DELETE from guestbook where name='".trim($name)."'";
+$sql = "DELETE from guestbook where name="$name";
 if(mysqli_query($conn, $sql)) {
     echo "Delete successfully";
 } else {
