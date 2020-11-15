@@ -6,7 +6,8 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $name = $_POST["name"];
-$res = mysqli_query($conn, "SELECT * FROM guestbook where name='".trim($name)."'";
+$sql = "SELECT * FROM guestbook where name='".trim($name)."'";
+$res = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($res) > 0) {
     $res = "DELETE FROM guestbook where name='".trim($name)."'";
