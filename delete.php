@@ -9,16 +9,14 @@ $name = $_POST["name"];
 
 $sql = "SELECT * from guestbook where name='".trim($name)."'";
 $result = mysqli_query($conn, $sql);
-if (mysqli_num_rows($result) > 0) {
-    $sql = "DELETE from guestbook where name='".trim($name)."'";
-    if(mysqli_query($conn, $sql)) {
-        echo "Delete successfully";
-    } else {
-        echo "Error: " .$sql. "<br>". mysqli_error($conn);
-    } 
+
+$sql = "DELETE from guestbook where name='".trim($name)."'";
+if(mysqli_query($conn, $sql)) {
+    echo "Delete successfully";
 } else {
-        echo "ไม่พบข้อมูล";
-    }
+    echo "Error: " .$sql. "<br>". mysqli_error($conn);
+} 
+
   
 mysqli_close($conn);
 ?>
