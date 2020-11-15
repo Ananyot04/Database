@@ -7,7 +7,7 @@ if (mysqli_connect_errno($conn))
 }
 $name = $_POST['Name'];
 $sql = "DELETE FROM guestbook WHERE Name = '.$name.' ";
-if (mysqli_query($conn, $sql)) {
+if (mysqli_query($sql)) {
     echo "Delete successfully";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
