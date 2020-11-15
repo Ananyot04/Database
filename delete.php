@@ -9,7 +9,7 @@ $name = $_POST["name"];
 $res = mysqli_query($conn, 'SELECT * FROM guestbook where name="$name"');
 
 if (mysqli_num_rows($res) > 0) {
-    $res = "DELETE from guestbook where name=$name";
+    $res = 'DELETE from guestbook where name="$name"';
     if(mysqli_query($conn, $sql)) {
         echo "Delete successfully";
     } else {
