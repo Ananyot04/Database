@@ -5,13 +5,18 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-if($_REQUEST['name'] != "")
-{
-$name = $_REQUEST['name'];
-$sql_del = "DELETE FROM guestbook WHERE name=$name";
-mysql_query($sql_del) or die(mysql_error());
-echo "ลบข้อมูล ID $name เรียบร้อยแล้ว";
-}
+$name=$_POST["name"];
+$comment = $_POST['comment'];
 
-$conn->close();
+
+$del = "DELETE from guestbook (Name , Comment) VALUES ('$name', '$comment')";
+
+
+if (mysqli_query($conn, $del)) {
+    echo "Delete successfully";
+  } else {
+    echo "Error: " . $del . "<br>" . mysqli_error($conn);
+  }
+  
+mysqli_close($conn);
 ?>
