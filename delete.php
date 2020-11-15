@@ -5,8 +5,8 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$name = $_POST['name'];
-$comment = $_POST['comment'];
+$name = $_POST['Name'];
+
 
 
 $sql = "DELETE from guestbook where Name='$name'";
