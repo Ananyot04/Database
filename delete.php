@@ -10,7 +10,7 @@ $sql = "SELECT * FROM guestbook where name='".trim($name)."'";
 $res = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($res) > 0) {
-    $res = "DELETE FROM guestbook where name='".trim($name)."'";
+    $sql = "DELETE FROM guestbook where name='".trim($name)."'";
     if(mysqli_query($conn, $sql)) {
         echo "Delete successfully";
     } else {
