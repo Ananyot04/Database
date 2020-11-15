@@ -8,7 +8,7 @@ if (mysqli_connect_errno($conn))
 $name = $_POST['Name'];
 $strSQL = "delete from guestbook";
 $strSQL .="where Name = '".$_GET["name"]."'";
-$objQuery = mysql_query($strSQL);
+$objQuery = mysqli_query($strSQL);
 if($objQuery) {
     echo "Delete successfully";
 } else {
