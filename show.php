@@ -24,10 +24,10 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><div align="center"><?php echo $Result['Name'];?></div></td>
-    <td><div align="center"><?php echo $Result['Comment'];?></div></td>
+    <td><div align="center"><?php echo $Result["Name"];?></div></td>
+    <td><div align="center"><?php echo $Result["Comment"];?></div></td>
       <td>
-          <div align="center"><a href="delete.php?name=".$Result["Name"].">ลบ</a></div>
+          <div align="center"><a href="delete.php?name=<?php echo $Result["Name"];?>">ลบ</a></div>
               <div align="center"><a href="update.php?name=<?php echo $Result["Name"];?>">แก้ไข</a></div></td>
   </tr>
 <?php
