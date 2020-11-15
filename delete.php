@@ -5,21 +5,18 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$name = $_POST["name"];
-$sql = "SELECT * FROM guestbook where name='".trim($name)."'";
-$res = mysqli_query($conn, $sql);
+$name = $_POST['name'];
+$comment = $_POST['comment'];
 
-if (mysqli_num_rows($res) > 0) {
-    $sql = "DELETE FROM guestbook where name='".trim($name)."'";
-    if(mysqli_query($conn, $sql)) {
-        echo "Delete successfully";
-    } else {
-    echo "Error: " .$sql. "<br>". mysqli_error($conn);
-    }
-} else {
-    echo "ไม่พบข้อมูล";
-} 
 
+$sql = "DELETE from guestbook where Name='$name'";
+
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
   
 mysqli_close($conn);
 ?>
