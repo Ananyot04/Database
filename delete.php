@@ -6,7 +6,7 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $name = $_POST['Name'];
-$strSQL = "delete from guestbook";
+$strSQL = "delete from guestbook ";
 $strSQL .="where Name = '".$_GET["name"]."'";
 $objQuery = mysqli_query($strSQL);
 if($objQuery) {
