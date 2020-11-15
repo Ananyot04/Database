@@ -5,12 +5,12 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-if($_REQUEST['del_id'] != "")
+if($_REQUEST['name'] != "")
 {
-$del_id = $_REQUEST['del_id'];
-$sql_del = "DELETE FROM guestbook WHERE id=$del_id";
+$name = $_REQUEST['name'];
+$sql_del = "DELETE FROM guestbook WHERE name=$name";
 mysql_query($sql_del) or die(mysql_error());
-echo "ลบข้อมูล ID $del_id เรียบร้อยแล้ว";
+echo "ลบข้อมูล ID $name เรียบร้อยแล้ว";
 }
 
 $conn->close();
