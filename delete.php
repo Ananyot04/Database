@@ -16,7 +16,8 @@ if (mysqli_num_rows($result) > 0) {
         echo "Delete successfully";
     } else {
         echo "Error: " .$sql. "<br>". mysqli_error($conn);
-    } else {
+    } 
+} else {
         echo "ไม่พบข้อมูล";
     }
   
