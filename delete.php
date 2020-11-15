@@ -6,13 +6,11 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $name = $_POST['Name'];
-$strSQL = "delete from guestbook where Name = '.$name.' ";
-$objQuery = mysqli_query($strSQL);
-if($objQuery) {
-    echo "Delete successfully.";
-} else {
-    echo "Error Delete [".$strSQL."]";
-}
-
+$sql = "DELETE FROM guestbook WHERE Name = '.$name.' ";
+if (mysqli_query($conn, $sql)) {
+    echo "Delete successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
 mysqli_close($conn);
 ?>
