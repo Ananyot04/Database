@@ -8,15 +8,17 @@ if (mysqli_connect_errno($conn))
 $name=$_POST["name"];
 $comment = $_POST['comment'];
 
-
-$del = "DELETE from guestbook (Name , Comment) VALUES ('$name', '$comment')";
-
-
-if (mysqli_query($conn, $del)) {
-    echo "Delete successfully";
-  } else {
-    echo "Error: " . $del . "<br>" . mysqli_error($conn);
-  }
+$sql = "SELECT * from guestbook where name='".trim($name)."'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+    $sql = "DELETE from guestbook where name='".trim($name)."'";
+    if(mysqli_query($conn, $sql)) {
+        echo "Delete successfully";
+    } else {
+        echo "Error: " .$sql. "<br>". mysqli_error($conn);
+    } else {
+        echo "ไม่พบข้อมูล";
+    }
   
 mysqli_close($conn);
 ?>
