@@ -6,10 +6,10 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $name = $_POST['Name'];
-$sql = "select * from guestbook where name=$name";
+$sql = "select * from guestbook where name='$name'";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
-    $sql = "DELETE from guestbook where name=$name";
+    $sql = "DELETE from guestbook where name='$name'";
     if(mysqli_query($conn, $sql)) {
         echo "Delete successfully";
     } else {
