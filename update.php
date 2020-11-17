@@ -5,10 +5,10 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-if(count($_POST)>0) {
+
     mysqli_query($conn,"UPDATE guestbook set name='" . $_POST['name'] . "', comment='" . $_POST['comment'] . "' WHERE name='" . $_POST['name'] . "'");
     $message = "Record Modified Successfully";
-    }
+
     $result = mysqli_query($conn,"SELECT * FROM guestbook WHERE name='" . $_GET['name'] . "'");
     $row= mysqli_fetch_array($result);
     ?>
