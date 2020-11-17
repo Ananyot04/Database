@@ -21,7 +21,7 @@ if(mysqli_num_rows($res)) {
     <tr><td>Name</td><td><input type="text" name="name" value="<?=$row1["Name"]?>"></td></tr>
     <tr><td>Comment</td><td><input type="text" name="comment" value="<?=$row1["Comment"]?>"></td></tr>
 <?php
-$sql = "SELECT name,comment FROM guestbook";
+$sql = "SELECT Name,Comment FROM guestbook";
 $res = mysqli_query($conn, $sql);
 if(mysqli_num_rows($res) > 0) {
     while($row = mysqli_fetch_assoc($res)) {
