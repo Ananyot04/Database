@@ -18,10 +18,8 @@ if(mysqli_num_rows($res)) {
 ?>
 <form action="update.php" method="post">
 <table border="1">
-        <tr>
-            <td>Name</td><td><input type="text" name="name" value="<?=$row1["Name"]?>"></td>
-            <td>Comment</td><td><input type="text" name="comment" value="<?=$row1["Comment"]?>"></td>
-        </tr>
+    <tr><td>Name</td><td><input type="text" name="name" value="<?=$row1["Name"]?>"></td></tr>
+    <tr><td>Comment</td><td><input type="text" name="comment" value="<?=$row1["Comment"]?>"></td></tr>
 <?php
 $sql = "SELECT name,comment FROM guestbook";
 $res = mysqli_query($conn, $sql);
@@ -37,7 +35,7 @@ if(mysqli_num_rows($res) > 0) {
     }
 }
 ?>
-</select></table>
+    </select></td></tr></table>
 <input type="submit" name="Submit" value="submit">
 </body>
 </html>
