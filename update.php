@@ -17,11 +17,10 @@ if(count($_POST)>0) {
     <title>Update Employee Data</title>
     </head>
     <body>
-    <form name="frmUser" method="post" action="">
+    <form name="frmUser" method="post" action="show.php">
     <div><?php if(isset($message)) { echo $message; } ?>
     </div>
     <div style="padding-bottom:5px;">
-    <a href="retrieve.php">Employee List</a>
     </div>
     Name: <br>
     <input type="hidden" name="name" class="txtField" value="<?php echo $row['name']; ?>">
@@ -30,6 +29,7 @@ if(count($_POST)>0) {
     Comment: <br>
     <input type="text" name="first_name" class="txtField" value="<?php echo $row['first_name']; ?>">
     <br>
+    <input type="submit" name="submit" value="Submit" class="buttom">
     
     </form>
     </body>
