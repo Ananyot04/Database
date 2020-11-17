@@ -23,11 +23,11 @@ if(count($_POST)>0) {
     <div style="padding-bottom:5px;">
     </div>
     Name: <br>
-    <input type="hidden" name="name" class="txtField" value="<?php echo $row['name']; ?>">
-    <input type="text" name="name"  value="<?php echo $row['name']; ?>">
+    <input type="hidden" name="name" class="txtField" value="<?php echo $row['Name']; ?>">
+    <input type="text" name="name"  value="<?php echo $row['Name']; ?>">
     <br>
     Comment: <br>
-    <input type="text" name="comment" class="txtField" value="<?php echo $row['comment']; ?>">
+    <input type="text" name="comment" class="txtField" value="<?php echo $row['Comment']; ?>">
     <br>
     <input type="submit" name="submit" value="Submit" class="buttom">
     
