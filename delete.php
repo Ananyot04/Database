@@ -6,11 +6,11 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-$sql = "DELETE FROM guestbook WHERE Name ='".$_GET["name"]."'";
-if (mysqli_query($sql)) {
-    echo "Delete successfully";
-  } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-  }
+$sql = "DELETE FROM guestbook WHERE name='" . $_GET["name"] . "'";
+if (mysqli_query($conn, $sql)) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . mysqli_error($conn);
+}
 mysqli_close($conn);
 ?>
