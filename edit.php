@@ -1,9 +1,9 @@
 <?php
-    $conn = mysqli_connect('apirat.mysql.database.azure.com', 'it63070185@apirat', 'UEKyfj18', 'ITFlab');
+    $conn = mysqli_connect('ananyot.mysql.database.azure.com', 'kilzen@ananyot', 'sM7wgvcaip', 'ITFlab', 3306);
 
     $id = $_GET['Name'];
 
-    $sql = 'SELECT * FROM guestboook WHERE name = ' . $id . '';
+    $sql = 'SELECT * FROM guestbook WHERE name = ' . $id . '';
     $query = mysqli_query($conn, $sql);
     if (!$query) {
         header('Location: show.php');
