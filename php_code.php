@@ -18,7 +18,7 @@
 		$comment = $_POST['comment'];
 
 		mysqli_query($db, "INSERT INTO guestbook (name, comment) VALUES ('$name', '$comment')"); 
-		$_SESSION['message'] = "Comment saved"; 
+		$_SESSION['message'] = "Information saved"; 
 		header('location: index.php');
 	}
 if (isset($_POST['update'])) {
@@ -26,7 +26,7 @@ if (isset($_POST['update'])) {
 	$name = $_POST['name'];
 	$address = $_POST['address'];
 
-	mysqli_query($db, "UPDATE guestbook SET name='$name', address='$comment' WHERE id=$id");
+	mysqli_query($db, "UPDATE guestbook SET name='$name', comment='$comment' WHERE id=$id");
 	$_SESSION['message'] = "Information updated!"; 
 	header('location: index.php');
 }
