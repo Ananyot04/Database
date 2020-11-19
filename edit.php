@@ -20,13 +20,13 @@ if (mysqli_connect_errno($conn))
 		
 	
 ?>
-	<form method="post" action="update.php" >
 		<table border="1">
     <tr><td>Name</td><td><input type="text" name="name" value="<?=$res["Name"]?>"></td></tr>
     <tr><td>Comment</td><td><input type="text" name="comment" value="<?=$res["Comment"]?>"></td></tr>
 		<?php
 	}
 	?>
+			<form method="post" action="update.php" >
 		<div class="input-group">
 			<button class="btn" type="submit" name="save" >update</button>
 		</div>
