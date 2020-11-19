@@ -1,4 +1,3 @@
-<?php  include('server.php'); ?>
 <?php
     session_start();
 	$db = mysqli_init();
