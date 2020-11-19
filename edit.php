@@ -24,11 +24,11 @@ if (mysqli_connect_errno($conn))
 		<form method="post" action="update.php" >
 		<div class="input-group">
 			<label>Name</label>
-			<input type="text" name="name" value="">
+			<input type="text" name="name" value="<?php=$res["name"]?>">
 		</div>
 		<div class="input-group">
 			<label>Comment</label>
-			<input type="text" name="address" value="">
+			<input type="text" name="comment" value="<?php=$res["comment"]?>">
 		</div>
 		<div class="input-group">
 			<button class="btn" type="submit" name="save" >update</button>
