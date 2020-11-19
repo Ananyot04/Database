@@ -15,14 +15,14 @@ if (mysqli_connect_errno($conn))
 ?>
 	<?php
 	$id = $_GET['Name'];
-		$update = true;
+		
 		$record = mysqli_query($db, "SELECT * FROM info WHERE name=$id");
 
-		if (count($record) == 1 ) {
+		
 			$n = mysqli_fetch_array($record);
 			$name = $n['Name'];
 			$comment = $n['Comment'];
-		}
+		
 	
 ?>
 	<form method="post" action="update.php" >
