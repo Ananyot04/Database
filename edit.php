@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CRUD: CReate, Update, Delete PHP MySQL</title>
+	<title>Update</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<form method="post" action="server.php" >
