@@ -5,7 +5,7 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$sql = "update guestbook set name='".$_POST["Name"]."', comment='".$_POST["Comment"]."' where name='".$_GET["Name"]."'";
+$sql = "update guestbook set name='".$_POST["name"]."', comment='".$_POST["comment"]."' where name='".$_GET["name"]."'";
 if(mysqli_query($conn, $sql)) {
     echo "update successfully";
 } else {
