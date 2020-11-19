@@ -14,9 +14,10 @@ if (mysqli_connect_errno($conn))
 }
 ?>
 	<?php
-	$id = $_POST['name'];
+	$id = $_GET['name'];
 	$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE name=$id");
-	$res = mysqli_fetch_array($record);
+	if(mysqli_num_rows($record) > 0) {
+		while($res = mysqli_fetch_array($record)) {
 		
 	
 ?>
@@ -33,5 +34,7 @@ if (mysqli_connect_errno($conn))
 			<button class="btn" type="submit" name="save" >update</button>
 		</div>
 	</form>
+	}
+	}
 </body>
 </html>
