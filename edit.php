@@ -15,9 +15,9 @@ if (mysqli_connect_errno($conn))
 ?>
 	<?php 
 	if (isset($_GET['edit'])) {
-		$id = $_GET['Name'];
+		$id = $_GET['edit'];
 		$update = true;
-		$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE name=$id");
+		$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE id=$id");
 
 		if (count($record) == 1 ) {
 			$n = mysqli_fetch_array($record);
