@@ -52,7 +52,9 @@
 	<?php } ?>
 </table>
 	<form method="post" action="php_code.php" >
+		<div class="input-group">
 		<input type="hidden" name="id" value="<?php echo $id; ?>">
+		</div>
 		<div class="input-group">
 			<label>Name</label>
 			<input type="text" name="name" value="<?php echo $name; ?>">
