@@ -13,7 +13,7 @@
 		?>
 	</div>
 <?php endif ?>
-	<form method="post" action="server.php" >
+	<form method="post" action="php_code.php" >
 		<div class="input-group">
 			<label>Name</label>
 			<input type="text" name="name" value="">
