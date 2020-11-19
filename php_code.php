@@ -32,8 +32,8 @@ if (isset($_POST['update'])) {
 }
 if (isset($_GET['del'])) {
 	$id = $_GET['del'];
-	mysqli_query($db, "DELETE FROM info WHERE id=$id");
-	$_SESSION['message'] = "Address deleted!"; 
+	mysqli_query($db, "DELETE FROM guestbook WHERE id=$id");
+	$_SESSION['message'] = "Information deleted!"; 
 	header('location: index.php');
 }
 ?>
