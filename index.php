@@ -26,8 +26,8 @@
 	
 	<?php while ($row = mysqli_fetch_array($results)) { ?>
 		<tr>
-			<td><?php echo $row['name']; ?></td>
-			<td><?php echo $row['comment']; ?></td>
+			<td><?php echo $row['Name']; ?></td>
+			<td><?php echo $row['Comment']; ?></td>
 			<td>
 				<a href="index.php?edit=<?php echo $row['id']; ?>" class="edit_btn" >Edit</a>
 			</td>
