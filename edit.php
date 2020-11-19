@@ -19,7 +19,6 @@ $res = mysqli_query($conn, $sql);
 $comment = mysqli_fetch_array($res);
 ?>
     <div class="container">
-        <h1>Edit comment</h1>
         <form action="update.php" method="post" class="mt-4">
             <div class="form-group">
                 <label for="inputName">Name</label>
