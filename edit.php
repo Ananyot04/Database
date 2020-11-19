@@ -13,7 +13,7 @@ if (mysqli_connect_errno($conn))
 }
 $sql = "SELECT * FROM guestbook where name='".$_GET["Name"]."'";
 $res = mysqli_query($conn, $sql);
-if(mysqli_num_rows($res)) {
+if(mysqli_num_rows($res) > 0) {
     while ($row1 = mysqli_fetch_assoc($res)) {
 ?>
 <form action="update.php" method="post">
