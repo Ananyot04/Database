@@ -11,7 +11,7 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$sql = "SELECT * FROM guestbook where name='".$_POST["Name"]."'";
+$sql = "SELECT * FROM guestbook where name='".$_GET["Name"]."'";
 $res = mysqli_query($conn, $sql);
 if(mysqli_num_rows($res)) {
     while ($row1 = mysqli_fetch_assoc($res)) {
