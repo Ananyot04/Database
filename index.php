@@ -62,7 +62,11 @@
 			<input type="text" name="comment" value="<?php echo $comment; ?>">
 		</div>
 		<div class="input-group">
-			<button class="btn" type="submit" name="save" >Save</button>
+			<?php if ($update == true): ?>
+	<button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
+<?php else: ?>
+	<button class="btn" type="submit" name="save" >Save</button>
+<?php endif ?>
 		</div>
 	</form>
 </body>
