@@ -26,6 +26,7 @@ if (mysqli_connect_errno($conn))
 		<?php
 	}
 	?>
+	</table>
 			<form method="post" action="update.php" >
 		<div class="input-group">
 			<button class="btn" type="submit" name="save" >update</button>
