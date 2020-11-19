@@ -24,7 +24,7 @@
 if (isset($_POST['update'])) {
 	$id = $_POST['id'];
 	$name = $_POST['name'];
-	$address = $_POST['address'];
+	$comment = $_POST['comment'];
 
 	mysqli_query($db, "UPDATE guestbook SET name='$name', comment='$comment' WHERE id=$id");
 	$_SESSION['message'] = "Information updated!"; 
