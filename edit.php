@@ -16,8 +16,7 @@ if (mysqli_connect_errno($conn))
 	<?php
 	$id = $_GET['name'];
 	$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE name=$id");
-	if(mysqli_num_rows($record) > 0) {
-		while($res = mysqli_fetch_array($record)) {
+	while($res = mysqli_fetch_array($record)) {
 		
 	
 ?>
@@ -35,7 +34,6 @@ if (mysqli_connect_errno($conn))
 		</div>
 	</form>
 	<?php
-	}
 	}
 	?>
 </body>
