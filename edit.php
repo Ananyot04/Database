@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Update</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	
 </head>
 <body>
@@ -22,10 +23,10 @@ if (mysqli_connect_errno($conn))
 ?>
 		<table border="1">
     <tr><td>Name</td><td><input type="text" name="name" value="<?=$res["Name"]?>"></td></tr>
-    <tr><td>Comment</td><td><input type="text" name="comment" value="<?=$res["Comment"]?>"></td></tr>
-		<?php
+    <tr><td>Comment</td><td><input type="text" name="comment" value="<?=$res["Comment"]?>">
+	    <?php
 	}
-	?>
+	?></td></tr>
 	</table>
 			<form method="post" action="update.php" >
 		<div class="input-group">
