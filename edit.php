@@ -14,9 +14,9 @@ if (mysqli_connect_errno($conn))
 }
 ?>
 	<?php 
-	if (isset($_GET['Name'])) {
+	
 		$name = $_GET['Name'];
-		$update = true;
+	
 		$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE name=$name");
 
 		if (count($record) == 1 ) {
@@ -24,7 +24,7 @@ if (mysqli_connect_errno($conn))
 			$name = $n['Name'];
 			$comment = $n['Comment'];
 		}
-	}
+	
 ?>
 	<form method="post" action="update.php" >
 		<input type="hidden" name="id" value="<?php echo $id; ?>">
@@ -37,11 +37,8 @@ if (mysqli_connect_errno($conn))
 			<input type="text" name="comment" value="<?php echo $comment; ?>">
 		</div>
 		<div class="input-group">
-			<?php if ($update == true): ?>
+			
 	<button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
-<?php else: ?>
-	<button class="btn" type="submit" name="save" >Save</button>
-<?php endif ?>
 		</div>
 	</form>
 </body>
