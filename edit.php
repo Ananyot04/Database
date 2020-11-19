@@ -34,7 +34,9 @@ if (mysqli_connect_errno($conn))
 			<button class="btn" type="submit" name="save" >update</button>
 		</div>
 	</form>
+	<?php
 	}
 	}
+	?>
 </body>
 </html>
