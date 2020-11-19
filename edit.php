@@ -13,30 +13,30 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 ?>
-	$name = $_POST['Name'];
-$sql = "SELECT * FROM guestbook WHERE name='$name'";
-$res = mysqli_query($conn, $sql);
-$comment = mysqli_fetch_array($res);
+	<?php
+	$id = $_GET['Name'];
+		$update = true;
+		$record = mysqli_query($db, "SELECT * FROM info WHERE name=$id");
+
+		if (count($record) == 1 ) {
+			$n = mysqli_fetch_array($record);
+			$name = $n['Name'];
+			$comment = $n['Comment'];
+		}
+	}
 ?>
-    <div class="container">
-        <form action="update.php" method="post" class="mt-4">
-            <div class="form-group">
-                <label for="inputName">Name</label>
-                <?php
-                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Enter Name" value="'.$comment["Name"].'">'
-                ?>
-            </div>
-            <div class="form-group">
-                <label for="inputComment">Comment</label>
-                <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Enter Comment"><?php echo $comment['Comment'];?></textarea>
-            </div>
-            <div class="mt-4">
-                <button type="submit" class="btn btn-primary mr-1">update</button>
-            </div>
-        </form>
-    </div>
-<?php
-mysqli_close($conn);
-?>
+	<form method="post" action="update.php" >
+		<div class="input-group">
+			<label>Name</label>
+			<input type="text" name="Name" value="<?php echo $name; ?>">
+		</div>
+		<div class="input-group">
+			<label>Comment</label>
+			<input type="text" name="Comment" value="<?php echo $comment; ?>">
+		</div>
+		<div class="input-group">
+			<button class="btn" type="submit" name="save" >update</button>
+		</div>
+	</form>
 </body>
 </html>
