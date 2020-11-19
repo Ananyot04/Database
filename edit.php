@@ -22,7 +22,7 @@ if(mysqli_num_rows($res)) {
     <tr><td>Comment</td><td><input type="text" name="comment" value="<?php=$row1["Comment"]?>"></td></tr>
     }
 }
-}
+
 </table>
 <input type="submit" name="Submit" value="submit">
 </body>
