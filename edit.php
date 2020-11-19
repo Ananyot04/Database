@@ -22,7 +22,8 @@ if(mysqli_num_rows($res) > 0) {
     }
 }
 
-    </form></table>
+    </select></table>
 <input type="submit" name="Submit" value="submit">
+    </form>
 </body>
 </html>
