@@ -1,4 +1,4 @@
-<?php  include('server.php'); ?>
+<?php  include('php_code.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +38,7 @@
 		</tr>
 	<?php } ?>
 </table>
-	<form method="post" action="sever.php" >
+	<form method="post" action="php_code.php" >
 		<div class="input-group">
 			<label>Name</label>
 			<input type="text" name="name" value="">
