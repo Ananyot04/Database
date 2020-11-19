@@ -29,12 +29,12 @@ if (mysqli_connect_errno($conn))
 			<label>Comment</label>
 			<input type="text" name="comment" value="<?php echo $res["comment"]; ?>">
 		</div>
+		<?php
+	}
+	?>
 		<div class="input-group">
 			<button class="btn" type="submit" name="save" >update</button>
 		</div>
 	</form>
-	<?php
-	}
-	?>
 </body>
 </html>
