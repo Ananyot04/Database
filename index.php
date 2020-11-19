@@ -1,4 +1,17 @@
 <?php  include('php_code.php'); ?>
+<?php 
+	if (isset($_GET['edit'])) {
+		$id = $_GET['edit'];
+		$update = true;
+		$record = mysqli_query($db, "SELECT * FROM guestbook WHERE id=$id");
+
+		if (count($record) == 1 ) {
+			$n = mysqli_fetch_array($record);
+			$name = $n['name'];
+			$comment = $n['comment'];
+		}
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,13 +52,14 @@
 	<?php } ?>
 </table>
 	<form method="post" action="php_code.php" >
+		<input type="hidden" name="id" value="<?php echo $id; ?>">
 		<div class="input-group">
 			<label>Name</label>
-			<input type="text" name="name" value="">
+			<input type="text" name="name" value="<?php echo $name; ?>">
 		</div>
 		<div class="input-group">
 			<label>Comment</label>
-			<input type="text" name="comment" value="">
+			<input type="text" name="comment" value="<?php echo $comment; ?>">
 		</div>
 		<div class="input-group">
 			<button class="btn" type="submit" name="save" >Save</button>
