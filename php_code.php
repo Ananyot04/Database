@@ -15,7 +15,7 @@
 
 	if (isset($_POST['save'])) {
 		$name = $_POST['name'];
-		$address = $_POST['comment'];
+		$comment = $_POST['comment'];
 
 		mysqli_query($db, "INSERT INTO guestbook (name, comment) VALUES ('$name', '$comment')"); 
 		$_SESSION['message'] = "Comment saved"; 
