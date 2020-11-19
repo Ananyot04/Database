@@ -14,10 +14,10 @@ if (mysqli_connect_errno($conn))
 }
 ?>
 	<?php 
-	if (isset($_GET['edit'])) {
-		$id = $_GET['edit'];
+	if (isset($_GET['name'])) {
+		$name = $_GET['name'];
 		$update = true;
-		$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE id=$id");
+		$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE name=$name");
 
 		if (count($record) == 1 ) {
 			$n = mysqli_fetch_array($record);
