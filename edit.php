@@ -14,7 +14,7 @@ if (mysqli_connect_errno($conn))
 }
 ?>
 	<?php
-	$id = $_POST['Name'];
+	$id = $_POST['name'];
 	$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE name=$id");
 	$res = mysqli_fetch_array($record);
 		
@@ -23,11 +23,11 @@ if (mysqli_connect_errno($conn))
 	<form method="post" action="update.php" >
 		<div class="input-group">
 			<label>Name</label>
-			<input type="text" name="name" value="<?php echo $res["Name"]; ?>">
+			<input type="text" name="name" value="<?php echo $res["name"]; ?>">
 		</div>
 		<div class="input-group">
 			<label>Comment</label>
-			<input type="text" name="comment" value="<?php echo $res["Comment"]; ?>">
+			<input type="text" name="comment" value="<?php echo $res["comment"]; ?>">
 		</div>
 		<div class="input-group">
 			<button class="btn" type="submit" name="save" >update</button>
