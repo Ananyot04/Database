@@ -21,8 +21,8 @@ if (mysqli_connect_errno($conn))
 
 		if (count($record) == 1 ) {
 			$n = mysqli_fetch_array($record);
-			$name = $n['name'];
-			$comment = $n['comment'];
+			$name = $n['Name'];
+			$comment = $n['Comment'];
 		}
 	}
 ?>
