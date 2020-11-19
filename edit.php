@@ -23,7 +23,7 @@ if (mysqli_connect_errno($conn))
 			$name = $n['Name'];
 			$comment = $n['Comment'];
 		}
-	}
+	
 ?>
 	<form method="post" action="update.php" >
 		<div class="input-group">
