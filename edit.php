@@ -14,7 +14,7 @@ if (mysqli_connect_errno($conn))
 }
 ?>
 	<?php
-	$id = $_GET['name'];
+	$id = $_GET['Name'];
 	$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE name=$id");
 	while($res = mysqli_fetch_array($record)) {
 		
