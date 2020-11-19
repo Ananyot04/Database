@@ -16,14 +16,10 @@ if (mysqli_connect_errno($conn))
 	<?php 
 	
 		$name = $_GET['Name'];
-	
+		$comment = $_GET['Comment']
 		$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE name=$name");
 
-		if (count($record) == 1 ) {
-			$n = mysqli_fetch_array($record);
-			$name = $n['Name'];
-			$comment = $n['Comment'];
-		}
+		
 	
 ?>
 	<form method="post" action="update.php" >
