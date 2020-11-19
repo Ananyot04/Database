@@ -15,24 +15,19 @@ if (mysqli_connect_errno($conn))
 ?>
 	<?php
 	$id = $_POST['Name'];
-		
-		$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE name=$id");
-
-		
-			$n = mysqli_fetch_array($record);
-			$name = $n['Name'];
-			$comment = $n['Comment'];
+	$record = mysqli_query($conn, "SELECT * FROM guestbook WHERE name=$id");
+	$res = mysqli_fetch_array($record);
 		
 	
 ?>
 	<form method="post" action="update.php" >
 		<div class="input-group">
 			<label>Name</label>
-			<input type="text" name="Name" value="<?php echo $name; ?>">
+			<input type="text" name="Name" value="<?php echo $res["Name"]; ?>">
 		</div>
 		<div class="input-group">
 			<label>Comment</label>
-			<input type="text" name="Comment" value="<?php echo $comment; ?>">
+			<input type="text" name="Comment" value="<?php echo $res["Comment"]; ?>">
 		</div>
 		<div class="input-group">
 			<button class="btn" type="submit" name="save" >update</button>
