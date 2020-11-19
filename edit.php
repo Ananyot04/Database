@@ -20,22 +20,9 @@ if(mysqli_num_rows($res)) {
 <table border="1">
     <tr><th>Name</th><td><input type="text" name="name" value="<?=$row1["Name"]?>"></td></tr>
     <tr><th>Comment</th><td><input type="text" name="comment" value="<?=$row1["Comment"]?>"></td></tr>
-<?php
-$sql = "SELECT Name,Comment FROM guestbook";
-$res = mysqli_query($conn, $sql);
-if(mysqli_num_rows($res) > 0) {
-    while($row = mysqli_fetch_assoc($res)) {
-        if($row["name"]==$row1["name"]) {
-            echo "<option value=" .$row["name"]. " selected>".$row["comment"];
-        } else {
-            echo "<option value=" .$row["name"]. ">".$row["comment"];
-        }
     }
 }
-    }
-}
-?>
-    </select></td></tr></table>
+</table>
 <input type="submit" name="Submit" value="submit">
 </body>
 </html>
