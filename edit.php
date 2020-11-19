@@ -18,8 +18,8 @@ if(mysqli_num_rows($res)) {
 ?>
 <form action="update.php" method="post">
 <table border="1">
-    <tr><th>Name</th><td><input type="text" name="name" value="<?=$row1["Name"]?>"></td></tr>
-    <tr><th>Comment</th><td><input type="text" name="comment" value="<?=$row1["Comment"]?>"></td></tr>
+    <tr><td>Name</td><td><input type="text" name="name" value="<?=$row1["Name"]?>"></td></tr>
+    <tr><td>Comment</td><td><input type="text" name="comment" value="<?=$row1["Comment"]?>"></td></tr>
     }
 }
 </table>
