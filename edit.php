@@ -10,11 +10,7 @@ if (mysqli_connect_errno($conn))
 
     $sql = 'SELECT * FROM guestbook WHERE name = ' . $id . '';
     $query = mysqli_query($conn, $sql);
-    if (!$query) {
-        header('Location: show.php');
-    } else {
-        $data = mysqli_fetch_assoc($query);
-    }
+    $data = mysqli_fetch_assoc($query);
     ?>
   <!DOCTYPE html>
   <html>
